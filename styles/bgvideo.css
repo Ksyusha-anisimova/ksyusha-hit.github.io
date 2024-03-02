@@ -1,0 +1,39 @@
+
+.bgvideo {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    /* чтобы смочь применить слои , чтобы текст на видео был виден, 
+    нужен flex */
+    display: flex;
+    /* центруем по горизонтали и по вертикали текст относительно контейнера  */
+    justify-content: center;
+    align-items: center;
+}
+.bgvideo video{
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+/* если наше видео переполняет какой-то контейнер , то его поля будут просто обрезаны
+, которые не вмещаются, будет отцентрованно по контейнеру выше */
+    object-fit:cover;
+    /* делаем индекст видео =1 , а текста =2 , чтобы текст был сверху видео */
+    z-index: 1;
+}
+.effect{
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit:cover;
+    z-index: 2;
+    background-color: rgba(15, 15, 15, 0.377);
+}
+.video-text{
+    color: aquamarine;
+    z-index: 2 ;
+    
+}
